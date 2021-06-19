@@ -1,8 +1,8 @@
 package org;
 
 public class Numeral {
-    private int digit_count; // Разрядов в числе
-    private int[] digits;    // Массив с числами по разрядам
+    private int digit_count;
+    private int[] digits;
 
     public Numeral(int numeral) {
         splitToDigitsByDivision(numeral);
@@ -13,8 +13,6 @@ public class Numeral {
     }
 
     private void splitToDigits(int numeral) {
-        // Вычислить разрядность числа методом строк
-        // TODO: delete this method, his unused
 
         String raw = String.valueOf(numeral);
         final int l = raw.length();
@@ -26,7 +24,6 @@ public class Numeral {
     }
 
     private void calcDigitCount(int numeral) {
-        // Узнаем разрядность числа
         this.digit_count = 0;
         while (numeral > 0) {
             numeral /= 10;
@@ -35,7 +32,6 @@ public class Numeral {
     }
 
     private void splitToDigitsByDivision(int numeral) {
-        // Вычислить разрядность числа методом деления
         this.calcDigitCount(numeral);
         this.digits = new int[this.digit_count];
         int i = 0;
